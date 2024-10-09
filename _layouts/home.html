@@ -12,11 +12,11 @@ layout: base
   <section class="featured-posts">
     <h2>Featured Posts</h2>
     <ul>
-      {% assign featured_posts = site.posts | where: "featured", true %}
+      {% assign featured_posts = site.posts | where: "featured", true | sort: 'date' %}
       {% if featured_posts.size > 0 %}
         {% for post in featured_posts %}
           <li>
-            <a href="{{ post.url | relative_url }}">
+            <a href="{{ post.url | relative_url }}" aria-label="Read more about {{ post.title }}">
               <h3>{{ post.title }}</h3>
               <p>{{ post.excerpt }}</p>
               <small>Published on {{ post.date | date: "%B %d, %Y" }}</small>
@@ -34,7 +34,7 @@ layout: base
     <ul>
       {% for post in site.posts limit: 5 %}
         <li>
-          <a href="{{ post.url | relative_url }}">
+          <a href="{{ post.url | relative_url }}" aria-label="Read more about {{ post.title }}">
             <h3>{{ post.title }}</h3>
             <small>Published on {{ post.date | date: "%B %d, %Y" }}</small>
           </a>
@@ -80,7 +80,7 @@ ul {
 
 ul li {
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #e1e1e1; /* Light border for separation */
   border-radius: 5px;
   transition: box-shadow 0.3s ease;
@@ -98,5 +98,20 @@ a {
 a:hover {
   text-decoration: underline;
   color: #005fa3; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .home-header h1 {
+    font-size: 2em;
+  }
+
+  .home-header p {
+    font-size: 1em;
+  }
+  
+  ul li {
+    padding: 10px;
+  }
 }
 </style>
