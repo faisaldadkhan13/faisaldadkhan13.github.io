@@ -1,1 +1,27 @@
 // Additional custom styles can be added here
+.header-menu {
+  margin-top: 20px;
+}
+
+.header-menu ul {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  display: flex; /* Horizontal layout */
+  justify-content: center; /* Center the menu items */
+}
+
+.header-menu li {
+  margin: 0 15px; /* Spacing between menu items */
+}
+
+.header-menu a {
+  text-decoration: none; /* Remove underline */
+  color: #00ff00; /* Hacker green */
+  font-weight: bold; /* Make the text bold */
+}
+
+.header-menu a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #00cc00; /* Darker green on hover */
+}
+
