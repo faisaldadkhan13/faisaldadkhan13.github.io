@@ -9,40 +9,44 @@ layout: base
     <p>Your go-to source for insights on coding, technology, and more.</p>
   </header>
 
-  <section class="featured-posts">
-    <h2>Featured Posts</h2>
-    <ul>
-      {% assign featured_posts = site.posts | where: "featured", true | sort: 'date' %}
-      {% if featured_posts.size > 0 %}
-        {% for post in featured_posts %}
+  <div class="posts-layout">
+    <section class="latest-posts">
+      <h2>Latest Posts</h2>
+      <ul>
+        {% assign latest_posts = site.posts | sort: 'date' | reverse %}
+        {% for post in latest_posts limit: 5 %}
           <li>
             <a href="{{ post.url | relative_url }}" aria-label="Read more about {{ post.title }}">
               <h3>{{ post.title }}</h3>
-              <p>{{ post.excerpt }}</p>
               <small>Published on {{ post.date | date: "%B %d, %Y" }}</small>
             </a>
           </li>
         {% endfor %}
-      {% else %}
-        <li>No featured posts available.</li>
-      {% endif %}
-    </ul>
-  </section>
+      </ul>
+    </section>
 
-  <section class="latest-posts">
-    <h2>Latest Posts</h2>
-    <ul>
-      {% for post in site.posts limit: 5 %}
-        <li>
-          <a href="{{ post.url | relative_url }}" aria-label="Read more about {{ post.title }}">
-            <h3>{{ post.title }}</h3>
-            <small>Published on {{ post.date | date: "%B %d, %Y" }}</small>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
+    <section class="featured-posts">
+      <h2>Featured Posts</h2>
+      <ul>
+        {% assign featured_posts = site.posts | where: "featured", true | sort: 'date' %}
+        {% if featured_posts.size > 0 %}
+          {% for post in featured_posts %}
+            <li>
+              <a href="{{ post.url | relative_url }}" aria-label="Read more about {{ post.title }}">
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt }}</p>
+                <small>Published on {{ post.date | date: "%B %d, %Y" }}</small>
+              </a>
+            </li>
+          {% endfor %}
+        {% else %}
+          <li>No featured posts available.</li>
+        {% endif %}
+      </ul>
+    </section>
+  </div>
 </div>
+
 
 <style>
 body {
