@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: base
 title: "Why I Chose GitHub"
 date: 2024-10-09
 ---
