@@ -1,0 +1,90 @@
+---
+# Contact Me page layout
+layout: base
+---
+
+<article class="contact-page">
+  <header class="page-header">
+    <h1>Contact Me</h1>
+  </header>
+  
+  <div class="page-content">
+    <p>If you’d like to get in touch, feel free to reach out through any of the following platforms:</p>
+    
+    <h2>Email</h2>
+    <p>You can email me at: <a href="mailto:faisaldadkhandevops@gmail.com">Faisaldadkhandevops@gmail.com</a></p>
+    
+    <h2>Social Media</h2>
+    <ul class="social-media">
+      <li><a href="https://linkedin.com/in/faisaldadkhan" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/faisaldadkhan13" target="_blank">GitHub</a></li>
+      <li><a href="https://instagram.com/thefaisalkhan13" target="_blank">Instagram</a></li>
+      <!-- Add more social media links as needed -->
+    </ul>
+    
+    <h2>Feedback</h2>
+    <p>I welcome your feedback, suggestions, or just a hello! Feel free to drop me a message on any platform.</p>
+  </div>
+  
+  <footer class="page-footer">
+    <a href="{{ site.baseurl }}/" class="back-home">Back to Home</a>
+  </footer>
+</article>
+
+<style>
+.contact-page {
+  max-width: 800px;
+  margin: 20px auto; /* Center the page */
+  padding: 20px;
+  background-color: #2a2a2a; /* Darker background */
+  color: #c1c1c1; /* Light text color */
+  border-radius: 5px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  color: #00ff00; /* Hacker green */
+}
+
+.page-content {
+  margin-bottom: 20px;
+}
+
+.social-media {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0;
+}
+
+.social-media li {
+  margin: 10px 0; /* Space between items */
+}
+
+.social-media a {
+  color: #00ff00; /* Hacker green */
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #00cc00; /* Slightly darker shade on hover */
+}
+
+.page-footer {
+  text-align: center;
+}
+
+.back-home {
+  text-decoration: none;
+  color: #00ff00; /* Hacker green */
+  font-weight: bold;
+}
+
+.back-home:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #00cc00; /* Slightly darker shade on hover */
+}
+</style>
