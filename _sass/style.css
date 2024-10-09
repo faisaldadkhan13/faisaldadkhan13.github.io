@@ -1,0 +1,18 @@
+.posts-layout {
+  display: flex;
+  justify-content: space-between; /* Space between the sections */
+}
+
+.latest-posts, .featured-posts {
+  width: 48%; /* Adjust width as necessary */
+}
+
+@media (max-width: 600px) {
+  .posts-layout {
+    flex-direction: column; /* Stack sections on smaller screens */
+  }
+
+  .latest-posts, .featured-posts {
+    width: 100%; /* Full width on small screens */
+  }
+}
