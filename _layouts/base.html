@@ -5,10 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1e1e1e;
+            color: #c1c1c1;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #2a2a2a;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #00ff00;
+        }
+        .header h1 {
+            margin: 0;
+            color: #00ff00;
+        }
+        .nav {
+            margin-top: 15px;
+        }
+        .nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .nav li {
+            margin: 0 15px;
+        }
+        .nav a {
+            color: #00ff00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+            color: #00cc00;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2a2a2a;
+            border-top: 2px solid #00ff00;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <h1>{{ site.title }}</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+                <li><a href="{{ '/archive' | relative_url }}">Archive</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         {{ content }}
