@@ -4,16 +4,99 @@ layout: base
 ---
 
 <div class="home">
-  <h1>{{ page.title }}</h1>
-  <p>Welcome to my blog! Here you'll find posts about coding, tech, and more.</p>
+  <header class="home-header">
+    <h1>Welcome to {{ site.title }}</h1>
+    <p>Your go-to source for insights on coding, technology, and more.</p>
+  </header>
 
-  <h2>Latest Posts</h2>
-  <ul>
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <small>Published on {{ post.date | date: "%B %d, %Y" }}</small>
-      </li>
-    {% endfor %}
-  </ul>
+  <section class="featured-posts">
+    <h2>Featured Posts</h2>
+    <ul>
+      {% assign featured_posts = site.posts | where: "featured", true %}
+      {% if featured_posts.size > 0 %}
+        {% for post in featured_posts %}
+          <li>
+            <a href="{{ post.url | relative_url }}">
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.excerpt }}</p>
+              <small>Published on {{ post.date | date: "%B %d, %Y" }}</small>
+            </a>
+          </li>
+        {% endfor %}
+      {% else %}
+        <li>No featured posts available.</li>
+      {% endif %}
+    </ul>
+  </section>
+
+  <section class="latest-posts">
+    <h2>Latest Posts</h2>
+    <ul>
+      {% for post in site.posts limit: 5 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">
+            <h3>{{ post.title }}</h3>
+            <small>Published on {{ post.date | date: "%B %d, %Y" }}</small>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 </div>
+
+<style>
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 2.5em;
+  color: #007acc; /* Primary color */
+}
+
+.home-header p {
+  font-size: 1.2em;
+  color: #555; /* Secondary text color */
+}
+
+h2 {
+  border-bottom: 2px solid #007acc; /* Underline effect */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #007acc; /* Primary color */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #e1e1e1; /* Light border for separation */
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+ul li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: #007acc; /* Link color */
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #005fa3; /* Darker shade on hover */
+}
+</style>
