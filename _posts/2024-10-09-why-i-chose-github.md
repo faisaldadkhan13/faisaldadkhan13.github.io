@@ -6,7 +6,7 @@ date: 2024-10-09
 
 As a developer, choosing the right platform for version control and collaboration is crucial. After exploring various options, I ultimately chose GitHub for several compelling reasons.
 
-<img src="/assets/images/github.jpg'>
+![Github image](assets/images/github.jpg)
 
 ## 1. **User-Friendly Interface**
 
