@@ -1,3 +1,21 @@
-title: Faisal's GitHub Blog
-description: A blog hosted on GitHub Pages
+title: Faisal's GiHub Blog
+description: Blog by an AI enthusiast.
 theme: minima
+baseurl: ""
+author:
+  name: Faisal Dad khan
+  email: faisaldadkhandevops@gmail.com
+social:
+  github: https://github.com/faisaldadkhan13
+  instagram: https://instagram.com/thefaisalkhan13
+  linkedin: https://linkedin.com/in/faisaldadkhan
+
+header_pages:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Archive
+    url: /archive
+  - title: Contact
+    url: /contact
