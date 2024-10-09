@@ -2,7 +2,7 @@
 layout: base
 title: Programming Tips and Tricks
 date: 2024-10-09
-featured: true
+featured: false
 ---
 
 Programming can be challenging, but with the right tips and tricks, you can enhance your productivity and improve your code quality. Here are some valuable strategies to consider:
