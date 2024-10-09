@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: base
 title: "Getting Started with GitHub Codespaces in 2024"
 date: 2024-10-09
 categories: GitHub
