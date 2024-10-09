@@ -2,7 +2,7 @@
 layout: base
 title: Simple HTML Tips
 date: 2024-10-09
-featured: true
+featured: false
 ---
 
 HTML is the backbone of web development. Here are some simple tips to help you write better HTML:
