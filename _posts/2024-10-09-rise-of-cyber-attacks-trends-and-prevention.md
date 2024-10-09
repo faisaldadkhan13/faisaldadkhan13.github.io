@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: base
 title: "The Rise of Cyber Attacks: Trends and Prevention in 2024"
 date: 2024-10-09
 categories: cybersecurity
