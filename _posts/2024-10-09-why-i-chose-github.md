@@ -6,6 +6,8 @@ date: 2024-10-09
 
 As a developer, choosing the right platform for version control and collaboration is crucial. After exploring various options, I ultimately chose GitHub for several compelling reasons.
 
+![Github Image](assets/images/github.jpg)
+
 ## 1. **User-Friendly Interface**
 
 GitHub offers an intuitive and clean interface that makes it easy for both beginners and experienced developers to navigate. The learning curve is minimal, and I found that I could start using it effectively almost immediately. This ease of use has helped me focus more on coding and less on figuring out how to use the tool.
