@@ -3,13 +3,56 @@
 layout: base
 ---
 
-<article>
-  <h1>{{ page.title }}</h1>
-  <small>Published on {{ page.date | date: "%B %d, %Y" }}</small>
-  <div>
+<article class="post">
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+    <small>Published on {{ page.date | date: "%B %d, %Y" }}</small>
+  </header>
+  
+  <div class="post-content">
     {{ content }}
   </div>
-  <footer>
-    <a href="{{ site.baseurl }}/">Back to Home</a>
+  
+  <footer class="post-footer">
+    <a href="{{ site.baseurl }}/" class="back-home">Back to Home</a>
   </footer>
 </article>
+
+<style>
+.post {
+  max-width: 800px;
+  margin: 20px auto; /* Center the post */
+  padding: 20px;
+  background-color: #2a2a2a; /* Darker background for posts */
+  color: #c1c1c1; /* Light text color */
+  border-radius: 5px;
+}
+
+.post-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post-header h1 {
+  color: #00ff00; /* Hacker green */
+}
+
+.post-content {
+  margin-bottom: 20px;
+}
+
+.post-footer {
+  text-align: center;
+}
+
+.back-home {
+  text-decoration: none;
+  color: #00ff00; /* Hacker green */
+  font-weight: bold;
+}
+
+.back-home:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #00cc00; /* Slightly darker shade on hover */
+}
+</style>
