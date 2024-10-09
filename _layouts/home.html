@@ -1,0 +1,19 @@
+---
+# Home layout for the blog
+layout: base
+---
+
+<div class="home">
+  <h1>{{ page.title }}</h1>
+  <p>Welcome to my blog! Here you'll find posts about coding, tech, and more.</p>
+
+  <h2>Latest Posts</h2>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <small>Published on {{ post.date | date: "%B %d, %Y" }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
