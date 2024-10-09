@@ -19,3 +19,6 @@ header_pages:
     url: /archive
   - title: Contact
     url: /contact
+sass:
+  sass_dir: _sass
+  style: compressed # Choose your preferred style (compressed, expanded, etc.)
