@@ -1,0 +1,15 @@
+---
+# Post layout for individual blog entries
+layout: base
+---
+
+<article>
+  <h1>{{ page.title }}</h1>
+  <small>Published on {{ page.date | date: "%B %d, %Y" }}</small>
+  <div>
+    {{ content }}
+  </div>
+  <footer>
+    <a href="{{ site.baseurl }}/">Back to Home</a>
+  </footer>
+</article>
